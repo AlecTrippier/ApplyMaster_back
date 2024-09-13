@@ -10,4 +10,8 @@ class ExampleController extends Controller
     {
         return response()->json(['message' => 'Hello from Laravel!']);
     }
+
+    public function items(){
+        return response()->json(['items' => ]);
+    }
 }
