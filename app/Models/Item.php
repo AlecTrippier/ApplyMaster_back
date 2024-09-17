@@ -8,4 +8,7 @@ use Illuminate\Database\Eloquent\Model;
 class Item extends Model
 {
     use HasFactory;
+
+    // マスアサインメント可能なカラムを定義
+    protected $fillable = ['name', 'description'];
 }

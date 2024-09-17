@@ -12,6 +12,6 @@ class ExampleController extends Controller
     }
 
     public function items(){
-        return response()->json(['items' => ]);
+        return response()->json(['items' => name]);
     }
 }
