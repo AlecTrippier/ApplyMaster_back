@@ -1,8 +1,13 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\ExampleController;
-use App\Http\Controllers\ApplicationController;
 
-Route::get('/data', [ExampleController::class, 'index']);
-Route::apiResource('items', ApplicationController::class);
+use App\Http\Controllers\Api\ClientProjectController;
+
+Route::get('/client_projects', [ClientProjectController::class, 'index']);
+Route::post('/client_projects', [ClientProjectController::class, 'store']);
+Route::get('/client_projects/{id}', [ClientProjectController::class, 'show']);
+Route::put('/client_projects/{id}', [ClientProjectController::class, 'update']);
+Route::delete('/client_projects/{id}', [ClientProjectController::class, 'delete']);
+
+
